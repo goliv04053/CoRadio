@@ -18,8 +18,10 @@ package app.coradio.shared.model.timer
 
 import app.coradio.shared.utils.AppLogger
 import kotlinx.coroutines.CoroutineName
-import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -29,7 +31,7 @@ class CoroutineTimerTask internal constructor(private val mName: String, action:
 
     var mDelay: Long = 0
     private var mRepeat: Long? = null
-    private val mCoroutineScope = GlobalScope
+    private val mCoroutineScope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
     private val mKeepRunning = AtomicBoolean(true)
     private var mJob: Job? = null
 
@@ -45,10 +47,11 @@ class CoroutineTimerTask internal constructor(private val mName: String, action:
         mKeepRunning.set(true)
         mJob = mCoroutineScope.launch(CoroutineName(mName)) {
             delay(mDelay)
-            if (mRepeat != null) {
+            val repeat = mRepeat
+            if (repeat != null) {
                 while (mKeepRunning.get()) {
                     tryAction()
-                    delay(mRepeat!!)
+                    delay(repeat)
                 }
             } else {
                 if (mKeepRunning.get()) {

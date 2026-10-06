@@ -134,11 +134,7 @@ class ParserLayerWebRadioImpl(private val mCountriesCache:Set<Country>) : Parser
                 }
                 for (j in 0 until genres.length()) {
                     val genre = genres.getString(j)
-                    if (tmp.containsKey(genre)) {
-                        tmp[genre] = tmp[genre]!! + 1
-                    } else {
-                        tmp[genre] = 1
-                    }
+                    tmp[genre] = (tmp[genre] ?: 0) + 1
                 }
             }
         }

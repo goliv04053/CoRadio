@@ -69,7 +69,7 @@ class ASXPlaylistParser(timeout: Int) : AbstractParser(timeout) {
                 break
             } catch (e: JDOMParseException) {
                 val message = e.message
-                xmlCpy = if (message!!.matches("^.*.The element type.*.must be terminated by the matching end-tag.*".toRegex())) {
+                xmlCpy = if (message != null && message.matches("^.*.The element type.*.must be terminated by the matching end-tag.*".toRegex())) {
                     val tag = message.substring(message.lastIndexOf("type") + 6, message.lastIndexOf("must") - 2)
                     xmlCpy.replace("(?i)</" + tag + ">".toRegex(), "</$tag>")
                 } else {

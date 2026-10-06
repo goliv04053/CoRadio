@@ -124,7 +124,10 @@ class UrlLayerRadioBrowserImpl : UrlLayer {
         uriOrigin: String,
         uri: String?, parameters: List<Pair<String, String>>
     ): URL? {
-        val uriModified = uriOrigin.replaceFirst(BASE_URL_PREFIX.toRegex(), uri!!)
+        if (uri == null) {
+            return null
+        }
+        val uriModified = uriOrigin.replaceFirst(BASE_URL_PREFIX.toRegex(), uri)
         return getUrl(uriModified, parameters)
     }
 
