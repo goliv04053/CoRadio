@@ -20,7 +20,7 @@ import android.util.Log
 
 object AppLogger {
 
-    private const val LOG_TAG = "OPNRD"
+    private const val LOG_TAG = "CORADIO"
 
     fun e(logMsg: String) {
         Log.e(LOG_TAG, "[" + Thread.currentThread().name + "] " + logMsg)

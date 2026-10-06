@@ -26,7 +26,6 @@ import androidx.multidex.MultiDexApplication
 import com.google.android.gms.security.ProviderInstaller
 import app.coradio.shared.dependencies.DependencyRegistryCommon
 import app.coradio.shared.model.storage.AppPreferencesManager
-import app.coradio.shared.utils.AnalyticsUtils
 import app.coradio.shared.utils.AppLogger
 import app.coradio.shared.utils.AppUtils
 import kotlinx.coroutines.CoroutineScope
@@ -78,9 +77,9 @@ open class MainAppCommon : MultiDexApplication() {
          * Send stats of the device to the cloud.
          */
         private fun sendStats(context: Context) {
-            AnalyticsUtils.logMessage("OS ver: " + Build.VERSION.RELEASE)
-            AnalyticsUtils.logMessage("SDK ver: " + Build.VERSION.SDK_INT)
-            AnalyticsUtils.logMessage("Density: : " + AppUtils.getDensityDpi(context))
+            AppLogger.d("OS ver: " + Build.VERSION.RELEASE)
+            AppLogger.d("SDK ver: " + Build.VERSION.SDK_INT)
+            AppLogger.d("Density: : " + AppUtils.getDensityDpi(context))
         }
 
         /**

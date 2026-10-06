@@ -22,7 +22,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.media3.common.MediaLibraryInfo
 import app.coradio.shared.R
-import app.coradio.shared.utils.AnalyticsUtils
 import app.coradio.shared.utils.AppUtils
 import app.coradio.shared.utils.IntentUtils
 import app.coradio.shared.utils.findImageView
@@ -60,8 +59,6 @@ class AboutDialog : BaseDialogFragment() {
         setOnClickOnText(context, view, R.id.about_web_radio_link_view, WEB_RADIO_URL)
         setOnClickOnText(context, view, R.id.about_playlist_parser_name_view, PLAY_LIST_PARSER_URL)
         setOnClickOnText(context, view, R.id.about_easy_swipe_name_view, SWIPE_EFFECT_URL)
-
-        AnalyticsUtils.logAboutOpen()
 
         return createAlertDialog(view)
     }
