@@ -1,3 +1,8 @@
+CoRadio is a fork of OpenRadio (https://github.com/ChernyshovYuriy/OpenRadio),
+originally created by Yurii Chernyshov and licensed under the Apache License,
+Version 2.0. Original copyright notices are retained in the source files.
+The CoRadio fork is maintained at https://github.com/TheFirstMonster/CoRadio.
+
 This project uses the following software:
 
 Copyright 2014 William Seemann
