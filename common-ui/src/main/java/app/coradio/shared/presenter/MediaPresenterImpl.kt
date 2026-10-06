@@ -234,14 +234,14 @@ class MediaPresenterImpl(
 
     override fun handleResume() {
         mIsOnSaveInstancePassed.set(false)
-        if (mActivity == null) {
-            return
-        }
+        // clean() clears these fields, so work on local copies.
+        val activity = mActivity ?: return
+        val mainLayout = mMainLayoutView ?: return
         val defaultCountry = mLocationStorage.getCountryCode()
-        LocationService.checkCountry(mActivity!!, mMainLayoutView!!, mLocationMessenger, defaultCountry)
+        LocationService.checkCountry(activity, mainLayout, mLocationMessenger, defaultCountry)
         if (AppUtils.hasVersionS() && AppPreferencesManager.isBtAutoPlay(mContext)) {
             if (!PermissionChecker.isBluetoothConnectGranted(mContext)) {
-                PermissionChecker.requestBluetoothPermission(mActivity!!, mMainLayoutView!!)
+                PermissionChecker.requestBluetoothPermission(activity, mainLayout)
             }
         }
     }
@@ -424,12 +424,13 @@ class MediaPresenterImpl(
     }
 
     override fun handleItemSettings(item: MediaItem) {
-        val transaction = getFragmentTransaction(mActivity)
-        if (transaction == null) {
+        val activity = mActivity
+        val transaction = getFragmentTransaction(activity)
+        if (activity == null || transaction == null) {
             AppLogger.w("$TAG can not handle settings with invalid transaction")
             return
         }
-        UiUtils.clearDialogs(mActivity!!.supportFragmentManager, transaction)
+        UiUtils.clearDialogs(activity.supportFragmentManager, transaction)
         val bundle = Bundle()
         RSSettingsDialog.provideMediaItem(
             bundle, item, mCurrentParentId, itemsCount()
@@ -440,10 +441,8 @@ class MediaPresenterImpl(
 
     @UnstableApi
     override fun handleItemSelected(item: MediaItem, clickPosition: Int) {
-        if (mActivity == null) {
-            return
-        }
-        if (!mNetworkLayer.checkConnectivityAndNotify(mActivity!!)) {
+        val activity = mActivity ?: return
+        if (!mNetworkLayer.checkConnectivityAndNotify(activity)) {
             return
         }
 
@@ -452,7 +451,7 @@ class MediaPresenterImpl(
         val isPlayable = data.isPlayable ?: false
         if (isBrowsable) {
             if (data.title != null
-                && data.title == mActivity!!.getString(R.string.category_empty)
+                && data.title == activity.getString(R.string.category_empty)
             ) {
                 return
             }
@@ -560,12 +559,13 @@ class MediaPresenterImpl(
             AppLogger.w("$TAG can not edit after OnSaveInstanceState")
             return
         }
-        val transaction = getFragmentTransaction(mActivity)
-        if (transaction == null) {
+        val activity = mActivity
+        val transaction = getFragmentTransaction(activity)
+        if (activity == null || transaction == null) {
             AppLogger.w("$TAG can not edit with invalid transaction")
             return
         }
-        UiUtils.clearDialogs(mActivity!!.supportFragmentManager, transaction)
+        UiUtils.clearDialogs(activity.supportFragmentManager, transaction)
 
         val item = view.tag as MediaItem
         val mediaId = item.mediaId
@@ -593,12 +593,13 @@ class MediaPresenterImpl(
             AppLogger.w("$TAG can not show Remove RS Dialog after OnSaveInstanceState")
             return
         }
-        val transaction = getFragmentTransaction(mActivity)
-        if (transaction == null) {
+        val activity = mActivity
+        val transaction = getFragmentTransaction(activity)
+        if (activity == null || transaction == null) {
             AppLogger.w("$TAG can not show Remove RS Dialog with invalid transaction")
             return
         }
-        UiUtils.clearDialogs(mActivity!!.supportFragmentManager, transaction)
+        UiUtils.clearDialogs(activity.supportFragmentManager, transaction)
 
         val item = view.tag as MediaItem
         var name = AppUtils.EMPTY_STRING
