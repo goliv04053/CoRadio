@@ -42,6 +42,7 @@
 
     <application
         android:name=".shared.MainAppCommon"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:requestLegacyExternalStorage="true"
         android:usesCleartextTraffic="true">
 
