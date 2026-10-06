@@ -53,7 +53,6 @@ class FileStorageDialog : BaseDialogFragment(), FileStoreManagerDependency {
 
     override fun onDestroy() {
         super.onDestroy()
-        AccountDialog.dismiss(parentFragmentManager)
         hideProgress()
     }
 

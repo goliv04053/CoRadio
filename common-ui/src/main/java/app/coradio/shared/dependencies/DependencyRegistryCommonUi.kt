@@ -24,7 +24,6 @@ import app.coradio.shared.model.logging.LoggingLayerImpl
 import app.coradio.shared.model.media.RadioStationManagerLayer
 import app.coradio.shared.model.net.NetworkLayer
 import app.coradio.shared.model.source.SourcesLayer
-import app.coradio.shared.model.storage.CloudStoreManager
 import app.coradio.shared.model.storage.DeviceLocalsStorage
 import app.coradio.shared.model.storage.FavoritesStorage
 import app.coradio.shared.model.storage.FileStoreManager
@@ -72,7 +71,6 @@ object DependencyRegistryCommonUi :
     private lateinit var sSourcesLayer: SourcesLayer
     private lateinit var sCastLayer: CastLayer
     private lateinit var sLoggingLayer: LoggingLayer
-    private lateinit var sCloudStoreManager: CloudStoreManager
     private lateinit var sFileStoraManager: FileStoreManager
 
     @Volatile
@@ -122,7 +120,6 @@ object DependencyRegistryCommonUi :
             context,
             sRadioStationManagerLayer
         )
-        sCloudStoreManager = CloudStoreManager()
         sFileStoraManager = FileStoreManager()
 
         sInit.set(true)
@@ -174,10 +171,6 @@ object DependencyRegistryCommonUi :
 
     fun injectStorageManagerLayer(dependency: StorageManagerDependency) {
         dependency.configureWith(sStorageManagerLayer)
-    }
-
-    fun injectCloudStoreManager(dependency: CloudStoreManagerDependency) {
-        dependency.configureWith(sCloudStoreManager)
     }
 
     fun injectFileStoreManager(dependency: FileStoreManagerDependency) {
