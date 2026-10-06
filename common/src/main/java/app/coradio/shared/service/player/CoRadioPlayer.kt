@@ -54,7 +54,6 @@ import app.coradio.shared.model.eq.EqualizerLayer
 import app.coradio.shared.model.media.BrowseTree
 import app.coradio.shared.model.storage.AppPreferencesManager
 import app.coradio.shared.service.CoRadioService
-import app.coradio.shared.utils.AnalyticsUtils
 import app.coradio.shared.utils.AppLogger
 import app.coradio.shared.utils.AppUtils
 import app.coradio.shared.utils.PlayerUtils
@@ -878,7 +877,7 @@ class CoRadioPlayer(
                     }
 
                     else -> {
-                        AnalyticsUtils.logMetadata(msg)
+                        AppLogger.d("Metadata: $msg")
                     }
                 }
                 if (title.isEmpty()) {

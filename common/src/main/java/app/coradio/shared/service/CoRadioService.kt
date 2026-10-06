@@ -59,7 +59,6 @@ import app.coradio.shared.model.storage.AppPreferencesManager
 import app.coradio.shared.model.timer.SleepTimerListener
 import app.coradio.shared.service.location.Country
 import app.coradio.shared.service.player.CoRadioPlayer
-import app.coradio.shared.utils.AnalyticsUtils
 import app.coradio.shared.utils.AppLogger
 import app.coradio.shared.utils.AppUtils
 import app.coradio.shared.utils.IntentUtils
@@ -300,7 +299,7 @@ class CoRadioService : MediaLibraryService() {
      */
     private fun handleUnrecognizedInputFormatException() {
         val playlistUrl = mActiveRS.getStreamUrlFixed()
-        AnalyticsUtils.logMessage("UnrecognizedInputFormat:$playlistUrl")
+        AppLogger.d("UnrecognizedInputFormat:$playlistUrl")
         handleStopRequest()
         mScope.launch(Dispatchers.IO) {
             withTimeout(API_CALL_TIMEOUT_MS) {
@@ -637,7 +636,7 @@ class CoRadioService : MediaLibraryService() {
         override fun onGetLibraryRoot(
             session: MediaLibrarySession, browser: MediaSession.ControllerInfo, params: LibraryParams?
         ): ListenableFuture<LibraryResult<MediaItem>> {
-            AnalyticsUtils.logMessage(
+            AppLogger.d(
                 "$TAG [$browser] GetLibraryRoot for clientPkgName=${browser.packageName}, clientUid=${browser.uid}"
             )
             mBrowser = browser
@@ -822,7 +821,7 @@ class CoRadioService : MediaLibraryService() {
                         } catch (exception: Exception) {
                             "Can't create a message: ${exception.message}"
                         }
-                        AnalyticsUtils.logEmptyLocalConfig(msg)
+                        AppLogger.w(msg)
                         continue
                     }
                     newItems.add(item)

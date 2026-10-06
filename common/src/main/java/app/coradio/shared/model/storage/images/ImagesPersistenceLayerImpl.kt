@@ -25,7 +25,6 @@ import android.os.ParcelFileDescriptor
 import androidx.exifinterface.media.ExifInterface
 import app.coradio.shared.model.net.DownloaderLayer
 import app.coradio.shared.model.net.HTTPDownloaderImpl
-import app.coradio.shared.utils.AnalyticsUtils
 import app.coradio.shared.utils.AppLogger
 import app.coradio.shared.utils.NetUtils
 import kotlinx.coroutines.CoroutineScope
@@ -235,7 +234,7 @@ class ImagesPersistenceLayerImpl(
         private fun handleOOM(bytesSize: Int, exception: OutOfMemoryError): ByteArray {
             System.gc()
             AppLogger.e("$TAG can't decode $bytesSize bytes for $mImageUrl", exception)
-            AnalyticsUtils.logBitmapDecode(mImageUrl, bytesSize)
+            AppLogger.d("Bitmap decode failed - URL: $mImageUrl, Size: $bytesSize bytes")
             return ByteArray(0)
         }
     }

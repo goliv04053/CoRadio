@@ -17,7 +17,6 @@
 package wseemann.media.jplaylistparser.parser
 
 import app.coradio.shared.extentions.equalsIgnoreCase
-import app.coradio.shared.utils.AnalyticsUtils
 import app.coradio.shared.utils.AppLogger
 import app.coradio.shared.utils.AppUtils
 import app.coradio.shared.utils.NetUtils
@@ -196,18 +195,18 @@ class AutoDetectParser(private val mTimeout: Int) {
 
     fun getStreamExtension(url: String, withAnalytics: Boolean = true): String {
         if (withAnalytics) {
-            AnalyticsUtils.logMessage("UnsupportedPlaylist:$url")
+            AppLogger.d("UnsupportedPlaylist:$url")
         }
         var result = AppUtils.EMPTY_STRING
         val httpUrl = HttpUrl.parse(url)
         if (httpUrl == null) {
             if (withAnalytics) {
-                AnalyticsUtils.logUnsupportedInvalidPlaylist(url)
+                AppLogger.d("Unsupported invalid playlist: $url")
             }
             return result
         }
         if (withAnalytics) {
-            AnalyticsUtils.logUnsupportedPlaylist(url)
+            AppLogger.d("Unsupported playlist: $url")
         }
         val client = OkHttpClient.Builder()
                 .followRedirects(true)
