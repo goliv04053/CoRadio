@@ -19,6 +19,11 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    lint {
+        // Existing findings are frozen in lint-baseline.xml; new ones fail the build.
+        baseline = file("lint-baseline.xml")
+    }
+
     compileOptions {
         sourceCompatibility project.ext.javaVersion
         targetCompatibility project.ext.javaVersion
