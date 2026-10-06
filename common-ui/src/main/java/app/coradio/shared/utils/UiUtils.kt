@@ -30,10 +30,14 @@ import android.widget.SeekBar
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.ToggleButton
+import androidx.annotation.AttrRes
+import androidx.annotation.ColorRes
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import com.google.android.material.color.MaterialColors
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import app.coradio.shared.view.dialog.AboutDialog
 import app.coradio.shared.view.dialog.AddStationDialog
@@ -171,6 +175,14 @@ fun ImageView.setImageBitmap(bytes: ByteArray) {
 }
 
 object UiUtils {
+
+    /**
+     * Resolves a theme color for the [view], so Material You (dynamic) colors are honoured.
+     * Themes that do not define [attr] (TV, car) get the [fallback] color resource instead.
+     */
+    fun themeColor(view: View, @AttrRes attr: Int, @ColorRes fallback: Int): Int {
+        return MaterialColors.getColor(view, attr, ContextCompat.getColor(view.context, fallback))
+    }
 
     /**
      * Clears any active dialog.

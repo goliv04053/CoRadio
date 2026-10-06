@@ -18,11 +18,14 @@ package app.coradio.mobile
 
 import app.coradio.mobile.dependencies.DependencyRegistry
 import app.coradio.shared.MainAppCommonUi
+import com.google.android.material.color.DynamicColors
 
 class MainApp: MainAppCommonUi() {
 
     override fun onCreate() {
         super.onCreate()
+        // Material You: use wallpaper-derived colors on Android 12+, the static palette otherwise.
+        DynamicColors.applyToActivitiesIfAvailable(this)
         DependencyRegistry.init()
     }
 }

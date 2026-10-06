@@ -257,11 +257,13 @@ class MediaPresenterImpl(
     }
 
     private fun updateNowPlayingView(isPlaying: Boolean) {
-        if (isPlaying) {
-            mCurrentRadioStationView?.setBackgroundColor(ContextCompat.getColor(mContext, R.color.or_color_green_dark))
+        val view = mCurrentRadioStationView ?: return
+        val color = if (isPlaying) {
+            UiUtils.themeColor(view, com.google.android.material.R.attr.colorPrimaryContainer, R.color.or_color_green_dark)
         } else {
-            mCurrentRadioStationView?.setBackgroundColor(ContextCompat.getColor(mContext, R.color.or_color_primary))
+            UiUtils.themeColor(view, com.google.android.material.R.attr.colorSurfaceContainerHigh, R.color.or_color_primary)
         }
+        view.setBackgroundColor(color)
     }
 
     private fun disconnect() {

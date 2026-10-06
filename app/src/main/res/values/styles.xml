@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Copyright 2020 The "Open Radio" Project. Author: Chernyshov Yuriy
+    Copyright 2026 The "CoRadio" Project.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -16,29 +16,56 @@
 -->
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat">
-
-        <item name="colorPrimary">@color/or_color_primary</item>
-        <item name="colorPrimaryDark">@color/or_color_primary_dark</item>
-        <item name="colorAccent">@color/or_color_accent</item>
-
+    <!--
+        Material 3 theme. On Android 12+ the wallpaper-derived dynamic colors replace these
+        (see DynamicColors in MainApp); the palette below is the fallback for older versions,
+        generated from the CoRadio green seed #3E905F (light scheme).
+    -->
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#FF366949</item>
+        <item name="colorOnPrimary">#FFE7FFEA</item>
+        <item name="colorPrimaryContainer">#FFB8F0C6</item>
+        <item name="colorOnPrimaryContainer">#FF285C3C</item>
+        <item name="colorSecondary">#FF506454</item>
+        <item name="colorOnSecondary">#FFE8FFEA</item>
+        <item name="colorSecondaryContainer">#FFD1E8D4</item>
+        <item name="colorOnSecondaryContainer">#FF425647</item>
+        <item name="colorTertiary">#FF566434</item>
+        <item name="colorOnTertiary">#FFF1FFCA</item>
+        <item name="colorTertiaryContainer">#FFEDFEBF</item>
+        <item name="colorOnTertiaryContainer">#FF556333</item>
+        <item name="colorError">#FFA83836</item>
+        <item name="colorOnError">#FFFFF7F6</item>
+        <item name="colorErrorContainer">#FFFA746F</item>
+        <item name="colorOnErrorContainer">#FF6E0A12</item>
+        <item name="android:colorBackground">#FFF7FAF4</item>
+        <item name="colorOnBackground">#FF2C342E</item>
+        <item name="colorSurface">#FFF7FAF4</item>
+        <item name="colorOnSurface">#FF2C342E</item>
+        <item name="colorSurfaceVariant">#FFDCE5DB</item>
+        <item name="colorOnSurfaceVariant">#FF586159</item>
+        <item name="colorOutline">#FF747D74</item>
+        <item name="colorOutlineVariant">#FFABB4AB</item>
+        <item name="colorSurfaceInverse">#FF0B0F0C</item>
+        <item name="colorOnSurfaceInverse">#FF9A9E99</item>
+        <item name="colorPrimaryInverse">#FFC5FED4</item>
+        <item name="colorSurfaceContainerLowest">#FFFFFFFF</item>
+        <item name="colorSurfaceContainerLow">#FFF0F5ED</item>
+        <item name="colorSurfaceContainer">#FFE9F0E7</item>
+        <item name="colorSurfaceContainerHigh">#FFE3EAE1</item>
+        <item name="colorSurfaceContainerHighest">#FFDCE5DB</item>
+        <item name="colorSurfaceDim">#FFD3DCD2</item>
+        <item name="colorSurfaceBright">#FFF7FAF4</item>
+        <item name="coradioDividerColor">?attr/colorOutlineVariant</item>
+        <item name="coradioLinkColor">?attr/colorPrimary</item>
     </style>
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="android:windowFullscreen">false</item>
-    </style>
+    <style name="AppTheme.NoActionBar" />
 
     <style name="text_style">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/or_color_text</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
     </style>
-
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
-
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
 </resources>
