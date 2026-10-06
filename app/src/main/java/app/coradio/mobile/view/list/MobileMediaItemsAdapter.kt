@@ -21,7 +21,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.content.res.AppCompatResources
-import androidx.core.content.ContextCompat
+import app.coradio.shared.utils.UiUtils
 import androidx.media3.common.MediaItem
 import androidx.media3.common.util.UnstableApi
 import com.xenione.libs.swipemaker.SwipeLayout
@@ -77,11 +77,14 @@ class MobileMediaItemsAdapter(private var mContext: Context, private val mMediaP
             (category == MediaId.MEDIA_ID_FAVORITES_LIST || category == MediaId.MEDIA_ID_LOCAL_RADIO_STATIONS_LIST).not()
         )
         holder.mForegroundView?.setOnClickListener(OnItemTapListener(mediaItem, position))
-        var color = R.color.or_color_primary
-        if (position == activeItemId) {
-            color = R.color.or_color_primary_dark
+        holder.mForegroundView?.let { row ->
+            val color = if (position == activeItemId) {
+                UiUtils.themeColor(row, com.google.android.material.R.attr.colorSecondaryContainer, R.color.or_color_primary_dark)
+            } else {
+                UiUtils.themeColor(row, com.google.android.material.R.attr.colorSurface, R.color.or_color_primary)
+            }
+            row.setBackgroundColor(color)
         }
-        holder.mForegroundView?.setBackgroundColor(ContextCompat.getColor(mContext, color))
     }
 
     override fun onViewRecycled(holder: MediaItemViewHolder) {

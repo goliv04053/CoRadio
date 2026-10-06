@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2026 The "CoRadio" Project.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<resources>
+
+    <!--
+        Material 3 theme. On Android 12+ the wallpaper-derived dynamic colors replace these
+        (see DynamicColors in MainApp); the palette below is the fallback for older versions,
+        generated from the CoRadio green seed #3E905F (dark scheme).
+    -->
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#FFA6D1B1</item>
+        <item name="colorOnPrimary">#FF224830</item>
+        <item name="colorPrimaryContainer">#FF355A41</item>
+        <item name="colorOnPrimaryContainer">#FFC3EECC</item>
+        <item name="colorSecondary">#FFB6CCB9</item>
+        <item name="colorOnSecondary">#FF314536</item>
+        <item name="colorSecondaryContainer">#FF2C4032</item>
+        <item name="colorOnSecondaryContainer">#FFAFC5B2</item>
+        <item name="colorTertiary">#FFF3FFCD</item>
+        <item name="colorOnTertiary">#FF566434</item>
+        <item name="colorTertiaryContainer">#FFE2F2B5</item>
+        <item name="colorOnTertiaryContainer">#FF4E5C2D</item>
+        <item name="colorError">#FFFA746F</item>
+        <item name="colorOnError">#FF490006</item>
+        <item name="colorErrorContainer">#FF871F21</item>
+        <item name="colorOnErrorContainer">#FFFF9993</item>
+        <item name="android:colorBackground">#FF0B0F0C</item>
+        <item name="colorOnBackground">#FFDFE8DE</item>
+        <item name="colorSurface">#FF0B0F0C</item>
+        <item name="colorOnSurface">#FFDFE8DE</item>
+        <item name="colorSurfaceVariant">#FF1F2821</item>
+        <item name="colorOnSurfaceVariant">#FFA4ADA4</item>
+        <item name="colorOutline">#FF6F786F</item>
+        <item name="colorOutlineVariant">#FF414A43</item>
+        <item name="colorSurfaceInverse">#FFF7FAF4</item>
+        <item name="colorOnSurfaceInverse">#FF525652</item>
+        <item name="colorPrimaryInverse">#FF41674D</item>
+        <item name="colorSurfaceContainerLowest">#FF000000</item>
+        <item name="colorSurfaceContainerLow">#FF0F1510</item>
+        <item name="colorSurfaceContainer">#FF151B16</item>
+        <item name="colorSurfaceContainerHigh">#FF1A211C</item>
+        <item name="colorSurfaceContainerHighest">#FF1F2821</item>
+        <item name="colorSurfaceDim">#FF0B0F0C</item>
+        <item name="colorSurfaceBright">#FF262E27</item>
+        <item name="coradioDividerColor">?attr/colorOutlineVariant</item>
+        <item name="coradioLinkColor">?attr/colorPrimary</item>
+    </style>
+
+</resources>

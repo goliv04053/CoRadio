@@ -22,6 +22,8 @@
         <item name="colorPrimary">@color/or_color_primary</item>
         <item name="colorPrimaryDark">@color/or_color_primary_dark</item>
         <item name="colorAccent">@color/or_color_accent</item>
+        <item name="coradioDividerColor">@color/or_color_text</item>
+        <item name="coradioLinkColor">@color/or_color_blue_light</item>
 
     </style>
 
