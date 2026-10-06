@@ -32,8 +32,7 @@ jobs:
     - name: Run unit tests
       run: ./gradlew testDebugUnitTest
     - name: Run lint
-      # Non-blocking until the existing lint backlog is cleaned up
-      continue-on-error: true
+      # Pre-existing findings are frozen in each module's lint-baseline.xml
       run: ./gradlew lintDebug
     - name: Upload test and lint reports
       if: always()

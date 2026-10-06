@@ -1,0 +1,1032 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.1.2" type="baseline" client="gradle" dependencies="false" name="AGP (8.1.2)" variant="all" version="8.1.2">
+
+    <issue
+        id="ScopedStorage"
+        message="READ_EXTERNAL_STORAGE is deprecated (and is not granted) when targeting Android 13+. If you need to query or interact with MediaStore or media files on the shared storage, you should instead use one or more new storage permissions: `READ_MEDIA_IMAGES`, `READ_MEDIA_VIDEO` or `READ_MEDIA_AUDIO`."
+        errorLine1="    &lt;uses-permission android:name=&quot;android.permission.READ_EXTERNAL_STORAGE&quot; />"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="25"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `networkSecurityConfig` is only used in API level 24 and higher (current min is 17)"
+        errorLine1="        android:networkSecurityConfig=&quot;@xml/network_security_config&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="45"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedAttribute"
+        message="Attribute `usesCleartextTraffic` is only used in API level 23 and higher (current min is 17)"
+        errorLine1="        android:usesCleartextTraffic=&quot;true&quot;>"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="47"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="VectorRaster"
+        message="This tag is not supported in images generated from this vector icon for API &lt; 21; check generated icon to make sure it looks acceptable"
+        errorLine1="        &lt;clip-path android:pathData=&quot;M0,-0.75L900,-0.75L900,600L0,600z&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/drawable/flag_aq.xml"
+            line="23"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="VectorRaster"
+        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
+        errorLine1="    android:width=&quot;800dp&quot;"
+        errorLine2="                   ~~~~~">
+        <location
+            file="src/main/res/drawable/flag_cd.xml"
+            line="18"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="VectorRaster"
+        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more"
+        errorLine1="    android:width=&quot;512dp&quot;"
+        errorLine2="                   ~~~~~">
+        <location
+            file="src/main/res/drawable/flag_in.xml"
+            line="18"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="VectorRaster"
+        message="This tag is not supported in images generated from this vector icon for API &lt; 21; check generated icon to make sure it looks acceptable"
+        errorLine1="        &lt;clip-path android:pathData=&quot;M0,0H650V350H0z&quot;/>"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/drawable/flag_tv.xml"
+            line="21"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="VectorRaster"
+        message="This tag is not supported in images generated from this vector icon for API &lt; 21; check generated icon to make sure it looks acceptable"
+        errorLine1="        &lt;clip-path android:pathData=&quot;M0,0V150H650V300H600zM0,300V350H300V0H600z&quot;/>"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/drawable/flag_tv.xml"
+            line="27"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="VectorRaster"
+        message="Resource references will not work correctly in images generated for this vector icon for API &lt; 21; check generated icon to make sure it looks acceptable"
+        errorLine1="        android:fillColor=&quot;@android:color/white&quot;"
+        errorLine2="                           ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/drawable/ic_launcher_foreground.xml"
+            line="12"
+            column="28"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.android.material:material than 1.11.0 is available: 1.14.0"
+        errorLine1="    }"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="62"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.media:media than 1.6.0 is available: 1.8.0"
+        errorLine1="}"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="63"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.exifinterface:exifinterface than 1.3.7 is available: 1.4.2"
+        errorLine1=""
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="64"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.room:room-runtime than 2.6.1 is available: 2.8.5"
+        errorLine1="    api &quot;com.android.support:multidex:$multidexVersion&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="66"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.room:room-ktx than 2.6.1 is available: 2.8.5"
+        errorLine1="    api &quot;com.google.android.material:material:$materialVersion&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="67"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.work:work-runtime-ktx than 2.9.0 is available: 2.12.0"
+        errorLine1="    implementation &quot;androidx.media:media:$androidxMediaVersion&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="68"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.core:core-ktx than 1.12.0 is available: 1.19.1"
+        errorLine1="    implementation group: &quot;androidx.exifinterface&quot;, name: &quot;exifinterface&quot;, version: &quot;$exifinterfaceVersion&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="69"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.activity:activity-ktx than 1.8.2 is available: 1.13.0"
+        errorLine1="    ksp(&quot;androidx.room:room-compiler:$roomVersion&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="70"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.media3:media3-exoplayer than 1.2.1 is available: 1.11.1"
+        errorLine1="    implementation &quot;androidx.work:work-runtime-ktx:$workVersion&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="73"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.media3:media3-datasource than 1.2.1 is available: 1.11.1"
+        errorLine1="    implementation &quot;androidx.core:core-ktx:$kotlinCoreKtx&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="74"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.media3:media3-exoplayer-hls than 1.2.1 is available: 1.11.1"
+        errorLine1="    implementation &quot;androidx.activity:activity-ktx:$kotlinActivityKtx&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="75"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.media3:media3-exoplayer-dash than 1.2.1 is available: 1.11.1"
+        errorLine1="    implementation &quot;org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinxCoroutinesAndroid&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="76"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.media3:media3-cast than 1.2.1 is available: 1.11.1"
+        errorLine1="    implementation &quot;org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinxCoroutinesCore&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="77"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.media3:media3-session than 1.2.1 is available: 1.11.1"
+        errorLine1="    api &quot;androidx.media3:media3-exoplayer:$media3Version&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="78"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.android.gms:play-services-location than 21.0.1 is available: 21.4.0"
+        errorLine1="    implementation &quot;androidx.media3:media3-datasource:$media3Version&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="79"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="ListenableFutureKt.await can only be called from within the same library group (referenced groupId=`androidx.work` from groupId=`CoRadio`)"
+        errorLine1="                    .await()"
+        errorLine2="                     ~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/MediaResourcesManager.kt"
+            line="97"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="ListenableFutureKt.await can only be called from within the same library group (referenced groupId=`androidx.work` from groupId=`CoRadio`)"
+        errorLine1="            val root = mMediaBrowser?.getLibraryRoot(null)?.await()?.value"
+        errorLine2="                                                            ~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/MediaResourcesManager.kt"
+            line="99"
+            column="61"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="ListenableFutureKt.await can only be called from within the same library group (referenced groupId=`androidx.work` from groupId=`CoRadio`)"
+        errorLine1="                ?.await()?.value ?: ImmutableList.of()"
+        errorLine2="                  ~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/MediaResourcesManager.kt"
+            line="124"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="ListenableFutureKt.await can only be called from within the same library group (referenced groupId=`androidx.work` from groupId=`CoRadio`)"
+        errorLine1="            children?.await()?.value ?: ImmutableList.of()"
+        errorLine2="                      ~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/MediaResourcesManager.kt"
+            line="143"
+            column="23"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="ListenableFutureKt.await can only be called from within the same library group (referenced groupId=`androidx.work` from groupId=`CoRadio`)"
+        errorLine1="        mMediaBrowser?.sendCustomCommand(SessionCommand(command, args), args)?.await()?.let {"
+        errorLine2="                                                                               ~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/MediaResourcesManager.kt"
+            line="156"
+            column="80"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="                PREFS_KEY_BUFFER_FOR_PLAYBACK, DefaultLoadControl.DEFAULT_BUFFER_FOR_PLAYBACK_MS"
+        errorLine2="                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/storage/AppPreferencesManager.kt"
+            line="148"
+            column="67"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="                PREFS_KEY_BUFFER_FOR_REBUFFER_PLAYBACK, DefaultLoadControl.DEFAULT_BUFFER_FOR_PLAYBACK_AFTER_REBUFFER_MS"
+        errorLine2="                                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/storage/AppPreferencesManager.kt"
+            line="160"
+            column="76"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="                else -> MimeTypes.AUDIO_UNKNOWN"
+        errorLine2="                                  ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/utils/AppUtils.kt"
+            line="283"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="        service.configureWith(sCoRadioServicePresenter)"
+        errorLine2="                ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/dependencies/DependencyRegistryCommon.kt"
+            line="215"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="            correctBufferSettings(applicationContext)"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/MainAppCommon.kt"
+            line="66"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="            dependencies.resultListener.onResult()"
+        errorLine2="                                        ~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/item/MediaItemAllCategories.kt"
+            line="41"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="            } ?: dependencies.resultListener.onResult()"
+        errorLine2="                                             ~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/item/MediaItemAllCategories.kt"
+            line="49"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="        dependencies.resultListener.onResult(dependencies.getMediaItems())"
+        errorLine2="                                    ~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/item/MediaItemAllCategories.kt"
+            line="75"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="        dependencies.resultListener.onResult(dependencies.getMediaItems())"
+        errorLine2="                                    ~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/item/MediaItemBrowseCar.kt"
+            line="57"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="            } ?: dependencies.resultListener.onResult()"
+        errorLine2="                                             ~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/item/MediaItemChildCategories.kt"
+            line="58"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="                dependencies.resultListener.onResult(dependencies.getMediaItems())"
+        errorLine2="                                            ~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/item/MediaItemCommandImpl.kt"
+            line="47"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="                dependencies.resultListener.onResult(dependencies.getMediaItems(), pageNumber = pageNumber)"
+        errorLine2="                                            ~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/item/MediaItemCommandImpl.kt"
+            line="50"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="        dependencies.resultListener.onResult(dependencies.getMediaItems(), set, pageNumber)"
+        errorLine2="                                    ~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/item/MediaItemCommandImpl.kt"
+            line="69"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="            } ?: dependencies.resultListener.onResult()"
+        errorLine2="                                             ~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/item/MediaItemCountriesList.kt"
+            line="48"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="        dependencies.resultListener.onResult(dependencies.getMediaItems())"
+        errorLine2="                                    ~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/item/MediaItemCountriesList.kt"
+            line="78"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="            } ?: dependencies.resultListener.onResult()"
+        errorLine2="                                             ~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/item/MediaItemCountryStations.kt"
+            line="60"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="                dependencies.resultListener.onResult(dependencies.getMediaItems(), list)"
+        errorLine2="                                            ~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/item/MediaItemFavoritesList.kt"
+            line="58"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="            } ?: dependencies.resultListener.onResult()"
+        errorLine2="                                             ~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/item/MediaItemFavoritesList.kt"
+            line="59"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="                dependencies.resultListener.onResult(dependencies.getMediaItems(), list)"
+        errorLine2="                                            ~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/item/MediaItemFeatured.kt"
+            line="51"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="            } ?: dependencies.resultListener.onResult()"
+        errorLine2="                                             ~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/item/MediaItemFeatured.kt"
+            line="52"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="                dependencies.resultListener.onResult(dependencies.getMediaItems(), list)"
+        errorLine2="                                            ~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/item/MediaItemLocalsList.kt"
+            line="59"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="            } ?: dependencies.resultListener.onResult()"
+        errorLine2="                                             ~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/item/MediaItemLocalsList.kt"
+            line="60"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="            } ?: dependencies.resultListener.onResult()"
+        errorLine2="                                             ~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/item/MediaItemNewStations.kt"
+            line="49"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="            } ?: dependencies.resultListener.onResult()"
+        errorLine2="                                             ~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/item/MediaItemPopularStations.kt"
+            line="52"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="        dependencies.resultListener.onResult(dependencies.getMediaItems())"
+        errorLine2="                                    ~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/item/MediaItemRoot.kt"
+            line="66"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="        dependencies.resultListener.onResult(dependencies.getMediaItems())"
+        errorLine2="                                    ~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/item/MediaItemRootCar.kt"
+            line="49"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="            } ?: dependencies.resultListener.onResult()"
+        errorLine2="                                             ~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/item/MediaItemSearchFromApp.kt"
+            line="52"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="            } ?: dependencies.resultListener.onResult()"
+        errorLine2="                                             ~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/item/MediaItemSearchFromService.kt"
+            line="62"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="UnsafeOptInUsageError"
+        message="This declaration is opt-in and its usage should be marked with `@androidx.media3.common.util.UnstableApi` or `@OptIn(markerClass = androidx.media3.common.util.UnstableApi.class)`"
+        errorLine1="                val userAgent = AppUtils.getUserAgent(context)"
+        errorLine2="                                         ~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/utils/NetUtils.kt"
+            line="82"
+            column="42"/>
+    </issue>
+
+    <issue
+        id="SwitchIntDef"
+        message="Switch statement on an `int` with known associated constant missing case `Player.STATE_BUFFERING`, `Player.STATE_ENDED`, `Player.STATE_IDLE`"
+        errorLine1="            when (playbackState) {"
+        errorLine2="            ~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/model/media/MediaResourcesManager.kt"
+            line="300"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. `R.foo.bar`) than by name (e.g. `getIdentifier(&quot;bar&quot;, &quot;foo&quot;, null)`)."
+        errorLine1="        val identifier = context.resources.getIdentifier("
+        errorLine2="                                           ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/utils/MediaItemBuilder.kt"
+            line="214"
+            column="44"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. `R.foo.bar`) than by name (e.g. `getIdentifier(&quot;bar&quot;, &quot;foo&quot;, null)`)."
+        errorLine1="        val identifier = context.resources.getIdentifier("
+        errorLine2="                                           ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/coradio/shared/utils/MediaItemBuilder.kt"
+            line="235"
+            column="44"/>
+    </issue>
+
+    <issue
+        id="TrustAllX509TrustManager"
+        message="`checkClientTrusted` is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers">
+        <location
+            file="$GRADLE_USER_HOME/caches/modules-2/files-2.1/com.google.http-client/google-http-client/1.43.3/a758b82e55a2f5f681e289c5ed384d3dbda6f3cd/google-http-client-1.43.3.jar"/>
+    </issue>
+
+    <issue
+        id="TrustAllX509TrustManager"
+        message="`checkServerTrusted` is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers">
+        <location
+            file="$GRADLE_USER_HOME/caches/modules-2/files-2.1/com.google.http-client/google-http-client/1.43.3/a758b82e55a2f5f681e289c5ed384d3dbda6f3cd/google-http-client-1.43.3.jar"/>
+    </issue>
+
+    <issue
+        id="ExportedContentProvider"
+        message="Exported content providers can provide access to potentially sensitive data"
+        errorLine1="        &lt;provider"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="49"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="InsecureBaseConfiguration"
+        message="Insecure Base Configuration"
+        errorLine1="    &lt;base-config cleartextTrafficPermitted=&quot;true&quot; />"
+        errorLine2="                                            ~~~~">
+        <location
+            file="src/main/res/xml/network_security_config.xml"
+            line="9"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="IconXmlAndPng"
+        message="The following images appear both as density independent `.xml` files and as bitmap files: src/main/res/drawable-hdpi/ic_pause.png, src/main/res/drawable/ic_pause.xml">
+        <location
+            file="src/main/res/drawable/ic_pause.xml"/>
+        <location
+            file="src/main/res/drawable-xxxhdpi/ic_pause.png"/>
+        <location
+            file="src/main/res/drawable-xxhdpi/ic_pause.png"/>
+        <location
+            file="src/main/res/drawable-xhdpi/ic_pause.png"/>
+        <location
+            file="src/main/res/drawable-mdpi/ic_pause.png"/>
+        <location
+            file="src/main/res/drawable-hdpi/ic_pause.png"/>
+    </issue>
+
+    <issue
+        id="IconXmlAndPng"
+        message="The following images appear both as density independent `.xml` files and as bitmap files: src/main/res/drawable-hdpi/ic_play_arrow.png, src/main/res/drawable/ic_play_arrow.xml">
+        <location
+            file="src/main/res/drawable/ic_play_arrow.xml"/>
+        <location
+            file="src/main/res/drawable-xxxhdpi/ic_play_arrow.png"/>
+        <location
+            file="src/main/res/drawable-xxhdpi/ic_play_arrow.png"/>
+        <location
+            file="src/main/res/drawable-xhdpi/ic_play_arrow.png"/>
+        <location
+            file="src/main/res/drawable-mdpi/ic_play_arrow.png"/>
+        <location
+            file="src/main/res/drawable-hdpi/ic_play_arrow.png"/>
+    </issue>
+
+    <issue
+        id="IconXmlAndPng"
+        message="The following images appear both as density independent `.xml` files and as bitmap files: src/main/res/drawable-hdpi/ic_radio_station.png, src/main/res/drawable/ic_radio_station.xml">
+        <location
+            file="src/main/res/drawable/ic_radio_station.xml"/>
+        <location
+            file="src/main/res/drawable-xxxhdpi/ic_radio_station.png"/>
+        <location
+            file="src/main/res/drawable-xxhdpi/ic_radio_station.png"/>
+        <location
+            file="src/main/res/drawable-xhdpi/ic_radio_station.png"/>
+        <location
+            file="src/main/res/drawable-mdpi/ic_radio_station.png"/>
+        <location
+            file="src/main/res/drawable-hdpi/ic_radio_station.png"/>
+    </issue>
+
+    <issue
+        id="IconXmlAndPng"
+        message="The following images appear both as density independent `.xml` files and as bitmap files: src/main/res/drawable-hdpi/ic_skip_next.png, src/main/res/drawable/ic_skip_next.xml">
+        <location
+            file="src/main/res/drawable/ic_skip_next.xml"/>
+        <location
+            file="src/main/res/drawable-xxxhdpi/ic_skip_next.png"/>
+        <location
+            file="src/main/res/drawable-xxhdpi/ic_skip_next.png"/>
+        <location
+            file="src/main/res/drawable-xhdpi/ic_skip_next.png"/>
+        <location
+            file="src/main/res/drawable-mdpi/ic_skip_next.png"/>
+        <location
+            file="src/main/res/drawable-hdpi/ic_skip_next.png"/>
+    </issue>
+
+    <issue
+        id="IconXmlAndPng"
+        message="The following images appear both as density independent `.xml` files and as bitmap files: src/main/res/drawable-hdpi/ic_skip_prev.png, src/main/res/drawable/ic_skip_prev.xml">
+        <location
+            file="src/main/res/drawable/ic_skip_prev.xml"/>
+        <location
+            file="src/main/res/drawable-xxxhdpi/ic_skip_prev.png"/>
+        <location
+            file="src/main/res/drawable-xxhdpi/ic_skip_prev.png"/>
+        <location
+            file="src/main/res/drawable-xhdpi/ic_skip_prev.png"/>
+        <location
+            file="src/main/res/drawable-mdpi/ic_skip_prev.png"/>
+        <location
+            file="src/main/res/drawable-hdpi/ic_skip_prev.png"/>
+    </issue>
+
+    <issue
+        id="WebpUnsupported"
+        message="WebP extended or lossless format requires Android 4.2.1 (API 18); current minSdkVersion is 17">
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher.webp"/>
+    </issue>
+
+    <issue
+        id="WebpUnsupported"
+        message="WebP extended or lossless format requires Android 4.2.1 (API 18); current minSdkVersion is 17">
+        <location
+            file="src/main/res/mipmap-mdpi/ic_launcher.webp"/>
+    </issue>
+
+    <issue
+        id="WebpUnsupported"
+        message="WebP extended or lossless format requires Android 4.2.1 (API 18); current minSdkVersion is 17">
+        <location
+            file="src/main/res/mipmap-xhdpi/ic_launcher.webp"/>
+    </issue>
+
+    <issue
+        id="WebpUnsupported"
+        message="WebP extended or lossless format requires Android 4.2.1 (API 18); current minSdkVersion is 17">
+        <location
+            file="src/main/res/mipmap-xxhdpi/ic_launcher.webp"/>
+    </issue>
+
+    <issue
+        id="WebpUnsupported"
+        message="WebP extended or lossless format requires Android 4.2.1 (API 18); current minSdkVersion is 17">
+        <location
+            file="src/main/res/mipmap-xxxhdpi/ic_launcher.webp"/>
+    </issue>
+
+    <issue
+        id="WebpUnsupported"
+        message="WebP extended or lossless format requires Android 4.2.1 (API 18); current minSdkVersion is 17">
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher_round.webp"/>
+    </issue>
+
+    <issue
+        id="WebpUnsupported"
+        message="WebP extended or lossless format requires Android 4.2.1 (API 18); current minSdkVersion is 17">
+        <location
+            file="src/main/res/mipmap-mdpi/ic_launcher_round.webp"/>
+    </issue>
+
+    <issue
+        id="WebpUnsupported"
+        message="WebP extended or lossless format requires Android 4.2.1 (API 18); current minSdkVersion is 17">
+        <location
+            file="src/main/res/mipmap-xhdpi/ic_launcher_round.webp"/>
+    </issue>
+
+    <issue
+        id="WebpUnsupported"
+        message="WebP extended or lossless format requires Android 4.2.1 (API 18); current minSdkVersion is 17">
+        <location
+            file="src/main/res/mipmap-xxhdpi/ic_launcher_round.webp"/>
+    </issue>
+
+    <issue
+        id="WebpUnsupported"
+        message="WebP extended or lossless format requires Android 4.2.1 (API 18); current minSdkVersion is 17">
+        <location
+            file="src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp"/>
+    </issue>
+
+    <issue
+        id="IconDipSize"
+        message="The image `ic_auto_icon.png` varies significantly in its density-independent (dip) size across the various density versions: drawable-xxhdpi/ic_auto_icon.png: 48x48 dp (144x144 px), drawable-xxxhdpi/ic_auto_icon.png: 36x36 dp (144x144 px)">
+        <location
+            file="src/main/res/drawable-xxxhdpi/ic_auto_icon.png"/>
+        <location
+            file="src/main/res/drawable-xxhdpi/ic_auto_icon.png"/>
+    </issue>
+
+    <issue
+        id="IconDipSize"
+        message="The image `ic_pause.png` varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/ic_pause.png: 24x24 dp (36x36 px), drawable-mdpi/ic_pause.png: 24x24 dp (24x24 px), drawable-xhdpi/ic_pause.png: 24x24 dp (48x48 px), drawable-xxhdpi/ic_pause.png: 24x24 dp (72x72 px), drawable-xxxhdpi/ic_pause.png: 18x18 dp (72x72 px)">
+        <location
+            file="src/main/res/drawable-xxxhdpi/ic_pause.png"/>
+        <location
+            file="src/main/res/drawable-mdpi/ic_pause.png"/>
+        <location
+            file="src/main/res/drawable-xxhdpi/ic_pause.png"/>
+        <location
+            file="src/main/res/drawable-hdpi/ic_pause.png"/>
+        <location
+            file="src/main/res/drawable-xhdpi/ic_pause.png"/>
+    </issue>
+
+    <issue
+        id="IconDipSize"
+        message="The image `ic_play_arrow.png` varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/ic_play_arrow.png: 24x24 dp (36x36 px), drawable-mdpi/ic_play_arrow.png: 24x24 dp (24x24 px), drawable-xhdpi/ic_play_arrow.png: 24x24 dp (48x48 px), drawable-xxhdpi/ic_play_arrow.png: 24x24 dp (72x72 px), drawable-xxxhdpi/ic_play_arrow.png: 18x18 dp (72x72 px)">
+        <location
+            file="src/main/res/drawable-xxxhdpi/ic_play_arrow.png"/>
+        <location
+            file="src/main/res/drawable-hdpi/ic_play_arrow.png"/>
+        <location
+            file="src/main/res/drawable-mdpi/ic_play_arrow.png"/>
+        <location
+            file="src/main/res/drawable-xhdpi/ic_play_arrow.png"/>
+        <location
+            file="src/main/res/drawable-xxhdpi/ic_play_arrow.png"/>
+    </issue>
+
+    <issue
+        id="IconDipSize"
+        message="The image `ic_radio_station.png` varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/ic_radio_station.png: 24x24 dp (36x36 px), drawable-mdpi/ic_radio_station.png: 24x24 dp (24x24 px), drawable-xhdpi/ic_radio_station.png: 24x24 dp (48x48 px), drawable-xxhdpi/ic_radio_station.png: 24x24 dp (72x72 px), drawable-xxxhdpi/ic_radio_station.png: 18x18 dp (72x72 px)">
+        <location
+            file="src/main/res/drawable-xxxhdpi/ic_radio_station.png"/>
+        <location
+            file="src/main/res/drawable-xhdpi/ic_radio_station.png"/>
+        <location
+            file="src/main/res/drawable-mdpi/ic_radio_station.png"/>
+        <location
+            file="src/main/res/drawable-hdpi/ic_radio_station.png"/>
+        <location
+            file="src/main/res/drawable-xxhdpi/ic_radio_station.png"/>
+    </issue>
+
+    <issue
+        id="IconDipSize"
+        message="The image `ic_skip_next.png` varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/ic_skip_next.png: 24x24 dp (36x36 px), drawable-mdpi/ic_skip_next.png: 24x24 dp (24x24 px), drawable-xhdpi/ic_skip_next.png: 24x24 dp (48x48 px), drawable-xxhdpi/ic_skip_next.png: 24x24 dp (72x72 px), drawable-xxxhdpi/ic_skip_next.png: 18x18 dp (72x72 px)">
+        <location
+            file="src/main/res/drawable-xxxhdpi/ic_skip_next.png"/>
+        <location
+            file="src/main/res/drawable-xxhdpi/ic_skip_next.png"/>
+        <location
+            file="src/main/res/drawable-hdpi/ic_skip_next.png"/>
+        <location
+            file="src/main/res/drawable-mdpi/ic_skip_next.png"/>
+        <location
+            file="src/main/res/drawable-xhdpi/ic_skip_next.png"/>
+    </issue>
+
+    <issue
+        id="IconDipSize"
+        message="The image `ic_skip_prev.png` varies significantly in its density-independent (dip) size across the various density versions: drawable-hdpi/ic_skip_prev.png: 24x24 dp (36x36 px), drawable-mdpi/ic_skip_prev.png: 24x24 dp (24x24 px), drawable-xhdpi/ic_skip_prev.png: 24x24 dp (48x48 px), drawable-xxhdpi/ic_skip_prev.png: 24x24 dp (72x72 px), drawable-xxxhdpi/ic_skip_prev.png: 18x18 dp (72x72 px)">
+        <location
+            file="src/main/res/drawable-xxxhdpi/ic_skip_prev.png"/>
+        <location
+            file="src/main/res/drawable-mdpi/ic_skip_prev.png"/>
+        <location
+            file="src/main/res/drawable-xhdpi/ic_skip_prev.png"/>
+        <location
+            file="src/main/res/drawable-xxhdpi/ic_skip_prev.png"/>
+        <location
+            file="src/main/res/drawable-hdpi/ic_skip_prev.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicatesConfig"
+        message="The `ic_auto_icon.png` icon has identical contents in the following configuration folders: drawable-xxhdpi, drawable-xxxhdpi">
+        <location
+            file="src/main/res/drawable-xxxhdpi/ic_auto_icon.png"/>
+        <location
+            file="src/main/res/drawable-xxhdpi/ic_auto_icon.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicatesConfig"
+        message="The `ic_pause.png` icon has identical contents in the following configuration folders: drawable-xxhdpi, drawable-xxxhdpi">
+        <location
+            file="src/main/res/drawable-xxxhdpi/ic_pause.png"/>
+        <location
+            file="src/main/res/drawable-xxhdpi/ic_pause.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicatesConfig"
+        message="The `ic_play_arrow.png` icon has identical contents in the following configuration folders: drawable-xxhdpi, drawable-xxxhdpi">
+        <location
+            file="src/main/res/drawable-xxxhdpi/ic_play_arrow.png"/>
+        <location
+            file="src/main/res/drawable-xxhdpi/ic_play_arrow.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicatesConfig"
+        message="The `ic_radio_station.png` icon has identical contents in the following configuration folders: drawable-xxhdpi, drawable-xxxhdpi">
+        <location
+            file="src/main/res/drawable-xxxhdpi/ic_radio_station.png"/>
+        <location
+            file="src/main/res/drawable-xxhdpi/ic_radio_station.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicatesConfig"
+        message="The `ic_skip_next.png` icon has identical contents in the following configuration folders: drawable-xxhdpi, drawable-xxxhdpi">
+        <location
+            file="src/main/res/drawable-xxxhdpi/ic_skip_next.png"/>
+        <location
+            file="src/main/res/drawable-xxhdpi/ic_skip_next.png"/>
+    </issue>
+
+    <issue
+        id="IconDuplicatesConfig"
+        message="The `ic_skip_prev.png` icon has identical contents in the following configuration folders: drawable-xxhdpi, drawable-xxxhdpi">
+        <location
+            file="src/main/res/drawable-xxxhdpi/ic_skip_prev.png"/>
+        <location
+            file="src/main/res/drawable-xxhdpi/ic_skip_prev.png"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/ic_notification_drawable.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/ic_notification_drawable.png"/>
+    </issue>
+
+    <issue
+        id="IconDensities"
+        message="Missing the following drawables in `drawable-hdpi`: ic_auto_icon.png (found in drawable-xxhdpi, drawable-xxxhdpi)">
+        <location
+            file="src/main/res/drawable-hdpi"/>
+    </issue>
+
+    <issue
+        id="IconDensities"
+        message="Missing the following drawables in `drawable-mdpi`: ic_auto_icon.png (found in drawable-xxhdpi, drawable-xxxhdpi)">
+        <location
+            file="src/main/res/drawable-mdpi"/>
+    </issue>
+
+    <issue
+        id="IconDensities"
+        message="Missing the following drawables in `drawable-xhdpi`: ic_auto_icon.png (found in drawable-xxhdpi, drawable-xxxhdpi)">
+        <location
+            file="src/main/res/drawable-xhdpi"/>
+    </issue>
+
+</issues>
