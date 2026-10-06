@@ -29,6 +29,21 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew assembleDebug
+    - name: Run unit tests
+      run: ./gradlew testDebugUnitTest
+    - name: Run lint
+      # Non-blocking until the existing lint backlog is cleaned up
+      continue-on-error: true
+      run: ./gradlew lintDebug
+    - name: Upload test and lint reports
+      if: always()
+      uses: actions/upload-artifact@v6
+      with:
+        name: reports
+        path: |
+          **/build/reports/tests/
+          **/build/reports/lint-results-*.html
+        if-no-files-found: ignore
 
     - name: Upload artifact coradio-debug.apk
       uses: actions/upload-artifact@v6
