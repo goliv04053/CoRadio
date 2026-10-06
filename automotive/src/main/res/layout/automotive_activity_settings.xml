@@ -274,37 +274,6 @@
                 android:alpha="0.5"
                 android:background="@color/or_color_text" />
 
-            <LinearLayout
-                android:id="@+id/automotive_account_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:orientation="vertical"
-                android:visibility="gone">
-
-                <TextView
-                    android:id="@+id/automotive_account_email_text_view"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:paddingBottom="5dp" />
-
-                <ImageButton
-                    android:id="@+id/automotive_account_sign_out_btn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
-                    android:src="@drawable/ic_sign_out" />
-
-                <ImageButton
-                    android:id="@+id/automotive_account_del_btn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
-                    android:src="@drawable/ic_delete" />
-
-            </LinearLayout>
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -336,31 +305,8 @@
 
             </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="15dp"
-                android:text="@string/cloud_storage"
-                android:textSize="18sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:baselineAligned="false"
-                android:orientation="horizontal">
-
-                <ImageButton
-                    android:id="@+id/automotive_cloud_storage_download_btn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:src="@drawable/ic_cloud_download" />
-
-            </LinearLayout>
-
             <ProgressBar
-                android:id="@+id/automotive_cloud_storage_progress_view"
+                android:id="@+id/automotive_file_storage_progress_view"
                 style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

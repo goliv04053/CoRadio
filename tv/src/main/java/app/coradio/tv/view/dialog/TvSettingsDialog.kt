@@ -22,13 +22,11 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ListView
-import app.coradio.shared.dependencies.DependencyRegistryCommon
 import app.coradio.shared.utils.UiUtils
 import app.coradio.shared.utils.findTextView
 import app.coradio.shared.view.dialog.AboutDialog
 import app.coradio.shared.view.dialog.BaseDialogFragment
 import app.coradio.shared.view.dialog.GeneralSettingsDialog
-import app.coradio.shared.view.dialog.CloudStorageDialog
 import app.coradio.shared.view.dialog.FileStorageDialog
 import app.coradio.shared.view.dialog.NetworkDialog
 import app.coradio.shared.view.dialog.SleepTimerDialog
@@ -68,13 +66,9 @@ class TvSettingsDialog : BaseDialogFragment() {
             getString(app.coradio.shared.R.string.main_menu_network),
             getString(app.coradio.shared.R.string.main_menu_buffering),
             getString(app.coradio.shared.R.string.main_menu_sleep_timer),
-            getString(app.coradio.shared.R.string.main_menu_cloud_storage),
             getString(app.coradio.shared.R.string.main_menu_file_storage),
             getString(app.coradio.shared.R.string.main_menu_about)
         )
-        if (DependencyRegistryCommon.isGoogleApiAvailable.not()) {
-            values.remove(getString(app.coradio.shared.R.string.main_menu_cloud_storage))
-        }
         val adapter = ArrayAdapterExt(context, android.R.layout.simple_list_item_1, values)
         listView.adapter = adapter
         listView.onItemClickListener =
@@ -112,16 +106,11 @@ class TvSettingsDialog : BaseDialogFragment() {
                         dialog.show(transaction, SleepTimerDialog.DIALOG_TAG)
                     }
                     5 -> {
-                        // Show Cloud Storage Dialog
-                        val dialog = newInstance(CloudStorageDialog::class.java.name)
-                        dialog.show(transaction, CloudStorageDialog.DIALOG_TAG)
-                    }
-                    6 -> {
                         // Show File Storage Dialog
                         val dialog = newInstance(FileStorageDialog::class.java.name)
                         dialog.show(transaction, FileStorageDialog.DIALOG_TAG)
                     }
-                    7 -> {
+                    6 -> {
                         // Show About Dialog
                         val dialog = newInstance(AboutDialog::class.java.name)
                         dialog.show(transaction, AboutDialog.DIALOG_TAG)

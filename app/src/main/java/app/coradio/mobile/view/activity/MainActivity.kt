@@ -37,7 +37,6 @@ import com.google.android.material.navigation.NavigationView
 import app.coradio.mobile.R
 import app.coradio.mobile.view.list.MobileMediaItemsAdapter
 import app.coradio.shared.broadcast.AppLocalReceiverCallback
-import app.coradio.shared.dependencies.DependencyRegistryCommon
 import app.coradio.shared.dependencies.DependencyRegistryCommonUi
 import app.coradio.shared.dependencies.MediaPresenterDependency
 import app.coradio.shared.model.media.MediaId
@@ -61,7 +60,6 @@ import app.coradio.shared.view.dialog.AboutDialog
 import app.coradio.shared.view.dialog.AddStationDialog
 import app.coradio.shared.view.dialog.BaseDialogFragment
 import app.coradio.shared.view.dialog.BatteryOptimizationDialog
-import app.coradio.shared.view.dialog.CloudStorageDialog
 import app.coradio.shared.view.dialog.EqualizerDialog
 import app.coradio.shared.view.dialog.FileStorageDialog
 import app.coradio.shared.view.dialog.GeneralSettingsDialog
@@ -271,12 +269,6 @@ class MainActivity : AppCompatActivity(), MediaPresenterDependency {
                     dialog.show(transaction, SleepTimerDialog.DIALOG_TAG)
                 }
 
-                R.id.nav_cloud_storage -> {
-                    // Show Cloud Storage Dialog
-                    val dialog = BaseDialogFragment.newInstance(CloudStorageDialog::class.java.name)
-                    dialog.show(transaction, CloudStorageDialog.DIALOG_TAG)
-                }
-
                 R.id.nav_file_storage -> {
                     // Show File Storage Dialog
                     val dialog = BaseDialogFragment.newInstance(FileStorageDialog::class.java.name)
@@ -307,10 +299,6 @@ class MainActivity : AppCompatActivity(), MediaPresenterDependency {
             }
             drawer.closeDrawer(GravityCompat.START)
             true
-        }
-
-        if (DependencyRegistryCommon.isGoogleApiAvailable.not()) {
-            navigationView.menu.removeItem(R.id.nav_cloud_storage)
         }
 
         // Handle Add Radio Station button.

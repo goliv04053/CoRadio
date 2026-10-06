@@ -41,7 +41,6 @@ import app.coradio.shared.view.dialog.BatteryOptimizationDialog
 import app.coradio.shared.view.dialog.EditStationDialog
 import app.coradio.shared.view.dialog.EqualizerDialog
 import app.coradio.shared.view.dialog.GeneralSettingsDialog
-import app.coradio.shared.view.dialog.CloudStorageDialog
 import app.coradio.shared.view.dialog.FileStorageDialog
 import app.coradio.shared.view.dialog.NetworkDialog
 import app.coradio.shared.view.dialog.RSSettingsDialog
@@ -185,7 +184,6 @@ object UiUtils {
         removeFragment(transaction, manager.findFragmentByTag(EditStationDialog.DIALOG_TAG))
         removeFragment(transaction, manager.findFragmentByTag(EqualizerDialog.DIALOG_TAG))
         removeFragment(transaction, manager.findFragmentByTag(GeneralSettingsDialog.DIALOG_TAG))
-        removeFragment(transaction, manager.findFragmentByTag(CloudStorageDialog.DIALOG_TAG))
         removeFragment(transaction, manager.findFragmentByTag(FileStorageDialog.DIALOG_TAG))
         removeFragment(transaction, manager.findFragmentByTag(NetworkDialog.DIALOG_TAG))
         removeFragment(transaction, manager.findFragmentByTag(RemoveStationDialog.DIALOG_TAG))
