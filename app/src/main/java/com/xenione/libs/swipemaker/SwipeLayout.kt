@@ -41,7 +41,7 @@ class SwipeLayout @JvmOverloads constructor(
     }
 
     fun isDragDisabled(value: Boolean) {
-        mOrientationStrategy.isDragDisabled(value)
+        mOrientationStrategy.isDragDisabled = value
     }
 
     override fun onInterceptTouchEvent(event: MotionEvent): Boolean {
