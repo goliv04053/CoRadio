@@ -46,6 +46,9 @@ android {
             }
         }
         release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
             if (project.ext.storeFileProp != null) {
                 signingConfig signingConfigs.config
             }
