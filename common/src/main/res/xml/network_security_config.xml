@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Station streams, playlists and artwork come from arbitrary third-party hosts and many
+    are only served over plain HTTP, so cleartext has to stay allowed by default.
+    The station directories CoRadio talks to are HTTPS-only: forbid cleartext for them so
+    a downgrade (or a bad redirect) can never expose or tamper with the station lists.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">radio-browser.info</domain>
+        <domain includeSubdomains="true">jcorporation.github.io</domain>
+    </domain-config>
+</network-security-config>

@@ -20,7 +20,9 @@ import android.content.ContentProvider
 import android.content.ContentValues
 import android.database.Cursor
 import android.net.Uri
+import android.os.Binder
 import android.os.ParcelFileDescriptor
+import android.os.Process
 import app.coradio.shared.dependencies.DependencyRegistryCommon
 
 class ImagesProvider : ContentProvider() {
@@ -38,6 +40,11 @@ class ImagesProvider : ContentProvider() {
     }
 
     override fun delete(uri: Uri, selection: String?, selectionArgs: Array<String>?): Int {
+        // The provider is exported so media clients can read artwork, but only the app
+        // itself may delete cached images.
+        if (Binder.getCallingUid() != Process.myUid()) {
+            return 0
+        }
         mImagesPersistenceLayer.delete(uri)
         return 1
     }
