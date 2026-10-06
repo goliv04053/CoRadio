@@ -13,6 +13,7 @@ android {
         minSdkVersion project.ext.minSdkVersion
         targetSdkVersion project.ext.targetSdkVersion
         multiDexEnabled true
+        consumerProguardFiles "consumer-rules.pro"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
