@@ -78,13 +78,13 @@ class AboutDialog : BaseDialogFragment() {
         val DIALOG_TAG = CLASS_NAME + "_DIALOG_TAG"
 
         /**
-         * My profile's url.
+         * Profile of the original OpenRadio author (kept for credit).
          */
         private const val AUTHOR_PROFILE_URL = "https://www.linkedin.com/in/yurii-chernyshov"
         /**
          * Project's url
          */
-        private const val PROJECT_HOME_URL = "https://github.com/ChernyshovYuriy/CoRadio"
+        private const val PROJECT_HOME_URL = "https://github.com/TheFirstMonster/CoRadio"
 
         private const val EXO_PLAYER_URL = "https://github.com/google/ExoPlayer"
 
@@ -92,7 +92,7 @@ class AboutDialog : BaseDialogFragment() {
 
         private const val SWIPE_EFFECT_URL = "https://github.com/xenione/swipe-maker"
 
-        private const val REPORT_ISSUE_URL = "https://github.com/ChernyshovYuriy/CoRadio/issues"
+        private const val REPORT_ISSUE_URL = "https://github.com/TheFirstMonster/CoRadio/issues"
 
         private const val RADIO_BROWSER_URL = "https://www.radio-browser.info"
 

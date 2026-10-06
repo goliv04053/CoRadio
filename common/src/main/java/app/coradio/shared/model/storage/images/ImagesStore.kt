@@ -25,7 +25,7 @@ object ImagesStore {
     /**
      * Base value for MIME type of the content provided.
      */
-    private const val MIME_TYPE_BASE = "com.yuriy.provider"
+    private const val MIME_TYPE_BASE = "app.coradio.provider"
 
     /**
      * The MIME type for images.
