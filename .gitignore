@@ -4,3 +4,6 @@
 /local.properties
 *.iml
 sign.properties
+# Prebuilt binaries belong in GitHub Releases, not in git
+*.apk
+*.aab
