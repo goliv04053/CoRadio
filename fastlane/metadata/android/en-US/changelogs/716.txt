@@ -1,0 +1,1 @@
+Material You theme, smaller APKs, security hardening and stability fixes. See CHANGELOG.md for details.

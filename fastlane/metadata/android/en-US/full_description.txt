@@ -1,0 +1,13 @@
+CoRadio is a free, ad-free, open-source internet radio player. Listen to live radio stations from around the world on your phone, Android TV, Android Auto or Android Automotive.
+
+<b>Features</b>
+• Browse stations by country, genre, popularity or search
+• Favorites and your own stations
+• Import and export your stations
+• Equalizer, sleep timer, stream buffering settings
+• Chromecast and Bluetooth auto-play
+• Material You dynamic colors on Android 12+
+
+Station data comes from the Community Radio Browser and Web Radio DB directories. CoRadio contains no ads and no analytics.
+
+CoRadio is a fork of OpenRadio by Yurii Chernyshov, licensed under Apache 2.0.
