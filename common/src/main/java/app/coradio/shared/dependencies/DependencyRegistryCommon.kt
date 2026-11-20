@@ -156,7 +156,10 @@ object DependencyRegistryCommon {
         val equalizerStorage = EqualizerStorage(contextRef)
         sEqualizerLayer = EqualizerLayerImpl(equalizerStorage)
         val imagesDatabase = ImagesDatabase.getInstance(context)
-        sImagesPersistenceLayer = ImagesPersistenceLayerImpl(context, downloader, imagesDatabase)
+        sImagesPersistenceLayer = ImagesPersistenceLayerImpl(context, downloader, imagesDatabase) { path ->
+            // Only images of stations the user saved on this device may be read from disk.
+            sDeviceLocalsStorage.getAll().any { it.imageUrl == path }
+        }
 
         val listenerProxy = RadioStationManagerLayerListenerImpl()
         sRadioStationManagerLayer = RadioStationManagerLayerImpl(

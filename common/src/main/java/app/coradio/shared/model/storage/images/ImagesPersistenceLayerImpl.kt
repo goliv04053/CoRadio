@@ -44,7 +44,12 @@ import java.io.IOException
 class ImagesPersistenceLayerImpl(
     private val mContext: Context,
     private val mDownloader: DownloaderLayer,
-    private val mImagesDatabase: ImagesDatabase
+    private val mImagesDatabase: ImagesDatabase,
+    /**
+     * Decides whether a local file path may be served by the (exported) images provider.
+     * Without this check any app could ask CoRadio to read an arbitrary image file.
+     */
+    private val mIsLocalImageAllowed: (path: String) -> Boolean
 ) : ImagesPersistenceLayer {
 
     /**
@@ -157,6 +162,10 @@ class ImagesPersistenceLayerImpl(
                     mContext, Uri.parse(mImageUrl), contentTypeFilter = HTTPDownloaderImpl.CONTENT_TYPE_IMG
                 )
             } else {
+                if (!mIsLocalImageAllowed(mImageUrl)) {
+                    AppLogger.w("$TAG local image '$mImageUrl' does not belong to a saved station, ignore")
+                    return
+                }
                 val file = File(mImageUrl)
                 val exif = ExifInterface(file.absoluteFile.toString())
                 orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL)
